@@ -1,11 +1,10 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { getProject, projects } from "@/lib/projects";
-
-export function generateStaticParams() { return projects.map(project => ({ slug: project.slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) { const project = getProject((await params).slug); return { title: `${project?.title ?? "Project not found"} | Sathwik’s Lab`, description: project?.description }; }
-export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
-  const project = getProject((await params).slug);
-  if (!project) notFound();
-  return <div className="page-shell"><Link href="/lab" className="back-link">← Back to the Lab</Link><header className="page-intro"><div className="tags"><span className="tag">{project.status}</span><span className="tag">{project.category}</span></div><h1>{project.title}<span className="accent">.</span></h1><p>{project.description}</p></header><div className={`project-art detail-art ${project.art}`} aria-hidden="true"><span className="art-label">{project.art === "stream" ? "ONE MORE EPISODE." : project.art === "flow" ? "ORDER → MESSAGE → MARKET" : project.art === "bot" ? "IDEAS MEET MARKETS." : "SMALL IDEAS. OPEN POSSIBILITIES."}</span><span className="project-number">{project.number}</span></div><div className="prose"><section><p className="eyebrow">THE IDEA</p><h2>What’s this about?</h2><p>{project.story}</p></section><section><p className="eyebrow">ON THE WORKBENCH</p><div className="tags">{project.stack.map(item => <span className="tag" key={item}>{item}</span>)}</div></section><section><h2>Where it stands</h2><p>{project.next}</p></section><Link href="/lab" className="button secondary">More experiments ↗</Link></div></div>;
+﻿import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { getProject, projects } from '@/lib/projects';
+import { ProjectArtwork } from '@/components/project-card';
+export function generateStaticParams(){return projects.map(project=>({slug:project.slug}));}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const project=getProject((await params).slug);return{title:project?.title??'Project not found',description:project?.description};}
+export default async function ProjectPage({params}:{params:Promise<{slug:string}>}){
+ const project=getProject((await params).slug); if(!project)notFound();
+ return <div className="page-shell"><Link className="back-link" href="/lab">← Back to the Lab</Link><header className="page-intro"><div className="tags"><span className="tag">{project.status}</span><span className="tag">{project.category}</span></div><h1>{project.title}<span className="accent">.</span></h1><p>{project.description}</p><div className="project-actions"><a className="button primary" href={project.github} target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>{project.demo&&<a className="button secondary" href={project.demo} target="_blank" rel="noopener noreferrer">Open demo ↗</a>}</div></header><ProjectArtwork project={project} detail/><div className="prose"><h2>About the project</h2><p>{project.story}</p><h2>Inside the build</h2><ul>{project.features.map(feature=><li key={feature}>{feature}</li>)}</ul><h2>Built with</h2><div className="tags">{project.stack.map(item=><span className="tag" key={item}>{item}</span>)}</div><h2>Where it stands</h2><p>{project.next}</p><Link className="button secondary" href="/lab">More experiments ↗</Link></div></div>;
 }
