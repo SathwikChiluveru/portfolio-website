@@ -20,7 +20,7 @@ Sathwik works in fintech as an Associate Technical Account Manager at Broadridge
 
 ## Operating Context
 
-Visitors browse Home, Work, Lab, and About. They can follow project source links, open available demos, filter the Lab, use the command palette. The site is hosted on Vercel at https://sathwikchiluveru.vercel.app and deploys from the GitHub repository SathwikChiluveru/portfolio-website.
+Visitors browse Home, Work, Lab, and About. They can follow project source links, open available demos, and filter the Lab. The site is hosted on Vercel at https://sathwikchiluveru.vercel.app and deploys from the GitHub repository SathwikChiluveru/portfolio-website.
 
 ## Capabilities and Constraints
 
@@ -68,3 +68,5 @@ Use plain, specific, natural language. Do not substitute forced slang for authen
 - Remove random project / Surprise me controls from the Lab.
 - Sathwik does not run. Interests shown are Traveling and Diving; do not reintroduce running.
 - Work uses the earlier single-line chronology with circular nodes. The user rejected the literal two-rail ladder; do not bring it back.
+
+- Search, its dialog, and the Ctrl/Cmd+K shortcut were explicitly removed. Navigation uses the visible page links.
