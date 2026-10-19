@@ -20,7 +20,7 @@ Sathwik works in fintech as an Associate Technical Account Manager at Broadridge
 
 ## Operating Context
 
-Visitors browse Home, Work, Lab, and About. They can follow project source links, open available demos, filter the Lab, choose a random project, or use the command palette. The site is hosted on Vercel at https://sathwikchiluveru.vercel.app and deploys from the GitHub repository SathwikChiluveru/portfolio-website.
+Visitors browse Home, Work, Lab, and About. They can follow project source links, open available demos, filter the Lab, use the command palette. The site is hosted on Vercel at https://sathwikchiluveru.vercel.app and deploys from the GitHub repository SathwikChiluveru/portfolio-website.
 
 ## Capabilities and Constraints
 
@@ -63,3 +63,8 @@ Use plain, specific, natural language. Do not substitute forced slang for authen
 
 - No additional personal narrative is needed for the current Work and About copy; preserve the existing facts and keep the wording simple.
 - No default between image-mockup-first and direct-code workflows was chosen. Do not record either as a standing preference.
+
+## Latest confirmed preferences
+- Remove random project / Surprise me controls from the Lab.
+- Sathwik does not run. Interests shown are Traveling and Diving; do not reintroduce running.
+- Work should have a visibly ladder-like chronology with two rails and connecting rungs, while preserving the established page style.
