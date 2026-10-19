@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 export const metadata = { title: "Work | Sathwik", description: "My work experience in software engineering and fintech." };
 
@@ -11,16 +12,17 @@ const experience = [
 ];
 
 export default function WorkPage() {
-  return <div className="page-shell simple-page work-page">
-    <header className="page-intro"><h1>Experience so far.</h1><p>Where I’ve worked, and what I worked on.</p></header>
-    <section className="timeline" aria-label="Work experience">
-      {experience.map(job => <article className="timeline-item" key={job.company}>
-        <p className="eyebrow">{job.date}</p>
-        <div><div className="company-heading"><div className="company-logos">{job.logos.map(logo => <span className="company-logo" key={logo.name}><Image src={logo.src} alt={logo.name + " logo"} width={120} height={44} unoptimized /></span>)}</div><h2>{job.company}</h2></div>
-        <h3>{job.role}</h3><p className="muted">{job.description}</p>
-        <div className="tags">{job.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div></div>
-      </article>)}
-    </section>
-    <div className="simple-page-link"><Link href="/lab" className="text-link">My projects ↗</Link></div>
+  return <div className="page-shell work-page">
+    <header className="page-intro"><h1>Experience<br/><span className="accent">so far.</span></h1><p>Where I’ve worked, and what I worked on.</p></header>
+    <ol className="career-ladder" aria-label="Work experience, most recent first">
+      {experience.map((job,index) => <li className={`career-step${index===0?' is-current':''}`} key={job.company}>
+        <div className="career-date"><span>{job.date}</span>{index===0&&<span className="career-current"><span className="status-dot"/> Current role</span>}</div>
+        <span className="career-node" aria-hidden="true"/>
+        <article className="career-entry"><div className="career-entry-top"><div className="company-logos">{job.logos.map(logo => <span className="company-logo" key={logo.name}><Image src={logo.src} alt="" width={120} height={44} unoptimized /></span>)}</div></div>
+          <h2>{job.company}</h2><h3>{job.role}</h3><p>{job.description}</p>
+        </article>
+      </li>)}
+    </ol>
+    <div className="work-next"><p>The things I build outside work live in the Lab.</p><Link href="/lab" className="button secondary">Explore the Lab <ArrowUpRight size={16}/></Link></div>
   </div>;
 }
