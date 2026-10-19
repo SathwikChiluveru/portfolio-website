@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Compass, MapPin, Waves } from "lucide-react";
 
-export const metadata = { title: "About | Sathwik", description: "A little about me, my work, and my projects." };
+export const metadata = { title: "About", description: "A little about me, my work, and my projects." };
 
 export default function AboutPage() {
   return <div className="page-shell about-page">

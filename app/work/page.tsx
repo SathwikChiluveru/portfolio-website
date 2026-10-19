@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
-export const metadata = { title: "Work | Sathwik", description: "My work experience in software engineering and fintech." };
+export const metadata = { title: "Work", description: "My work experience in software engineering and fintech." };
 
 const experience = [
   { date: "SEP 2026 — PRESENT", company: "Broadridge", logos: [{ name: "Broadridge", src: "/logos/broadridge.svg" }], role: "Associate Technical Account Manager", description: "I work on FIX workflows, order routing, system configurations, and integrations, helping troubleshoot technical issues.", tags: ["Financial technology", "FIX workflows", "Technical operations"] },

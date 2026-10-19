@@ -37,7 +37,7 @@ Visitors browse Home, Work, Lab, and About. They can follow project source links
 
 The user likes the current design, landing page, navbar, footer, icons, and colors. Preserve that established identity during copy changes.
 
-The homepage should feel chill and personal, with professional information as context. Work and About should describe experience and interests in straightforward, relaxed language. The user explicitly rejected headings such as "Understanding systems. Connecting the dots." and "The thread through it all" as trying too hard. Use simple headings and compact spacing; do not ask for a personal story when the request is to simplify the existing content.
+The homepage should feel chill and personal, with professional information as context. Work and About should describe experience and interests in straightforward, relaxed language. The user explicitly rejected headings such as "Understanding systems. Connecting the dots." and "The thread through it all" as trying too hard. Remove decorative closing slogans on the homepage. Use simple headings and compact spacing; do not ask for a personal story when the request is to simplify the existing content.
 
 Use plain, specific, natural language. Do not substitute forced slang for authenticity. Avoid numbered section labels, the phrase "Beyond the Screen", and slogans such as "Two sides. Same curiosity." Company logos should retain their original artwork and colors.
 
@@ -67,4 +67,4 @@ Use plain, specific, natural language. Do not substitute forced slang for authen
 ## Latest confirmed preferences
 - Remove random project / Surprise me controls from the Lab.
 - Sathwik does not run. Interests shown are Traveling and Diving; do not reintroduce running.
-- Work should have a visibly ladder-like chronology with two rails and connecting rungs, while preserving the established page style.
+- Work uses the earlier single-line chronology with circular nodes. The user rejected the literal two-rail ladder; do not bring it back.

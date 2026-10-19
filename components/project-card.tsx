@@ -6,6 +6,7 @@ export function ProjectArtwork({ project, detail = false }: { project: Project; 
  const Icon = project.art === 'trace' ? Activity : project.art === 'advisor' ? ChartNoAxesCombined : project.art === 'atlas' ? Compass : project.art === 'sprout' ? Sprout : project.art === 'flight' ? Plane : Code2;
  return <div className={`project-art repo-art ${project.art}${detail ? ' detail-art' : ''}`} aria-hidden="true"><div className="art-topline"><span>{project.category.toUpperCase()}</span><ArrowUpRight size={18}/></div><div className="repo-art-center"><Icon size={42} strokeWidth={1.2}/><span>{project.artLabel}</span></div><span className="art-caption">PROJECT ILLUSTRATION · SOURCE ON GITHUB</span></div>;
 }
-export function ProjectCard({ project }: { project: Project }) {
- return <Link href={`/lab/${project.slug}`} className="project-card"><ProjectArtwork project={project}/><div className="project-info"><div><span className="project-index">{project.stack.slice(0,3).join(' / ')}</span><h3>{project.title}<ArrowUpRight size={18}/></h3><p>{project.description}</p></div><span className="tag">{project.status}</span></div></Link>;
+export function ProjectCard({ project, headingLevel = 3 }: { project: Project; headingLevel?: 2 | 3 }) {
+ const Heading = headingLevel === 2 ? 'h2' : 'h3';
+ return <Link href={`/lab/${project.slug}`} className="project-card"><ProjectArtwork project={project}/><div className="project-info"><div><span className="project-index">{project.stack.slice(0,3).join(' / ')}</span><Heading>{project.title}<ArrowUpRight size={18}/></Heading><p>{project.description}</p></div><span className="tag">{project.status}</span></div></Link>;
 }
