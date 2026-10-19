@@ -37,7 +37,7 @@ export default function Home() {
         <div className="project-grid">{projects.filter(project => project.featured).map(project => <ProjectCard key={project.slug} project={project}/>)}</div>
       </section>
 
-      <section className="beyond"><div className="beyond-icon"><Compass size={29} strokeWidth={1.3} /></div><div><div className="eyebrow">BEYOND THE SCREEN</div><h2>Occasionally, I go outside.</h2><p>New places, long runs, and a little time underwater. There’s a world beyond the next browser tab.</p></div><Link href="/about" className="button secondary">A little more about me <ArrowUpRight size={16} /></Link></section>
+      <section className="beyond"><div className="beyond-icon"><Compass size={29} strokeWidth={1.3} /></div><div><h2>Occasionally, I go outside.</h2><p>New places, long runs, and a little time underwater. There’s a world beyond the next browser tab.</p></div><Link href="/about" className="button secondary">A little more about me <ArrowUpRight size={16} /></Link></section>
       <div className="home-endnote"><span>GOOD THINGS START WITH “WHAT IF?”</span><ArrowDown size={14} /><span>LET’S SEE WHAT’S NEXT.</span></div>
     </div>
   );
