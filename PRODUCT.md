@@ -1,31 +1,65 @@
-# Product direction
+# Product
 
-## Identity
+<!-- impeccable:product-schema 1 -->
 
-Technical by profession. Builder by curiosity.
+## Platform
 
-Sathwik's portfolio should connect his current fintech work with his software engineering background and independent experiments. The professional anchor is Associate Technical Account Manager at Broadridge in Singapore. The emphasis is financial systems, FIX workflows, integrations, troubleshooting, and client-facing technical problem-solving.
+web
 
-The Lab is a collection of things built, explored, paused, or imagined. Projects need not be polished, commercially useful, or related to fintech. The site should remain useful as Sathwik's career changes.
+## Users
 
-## First version
+A mix of people exploring Sathwik's builds and professional contacts learning about his experience. Neither audience should make the site feel like a job application or a corporate profile.
 
-The homepage communicates the two sides immediately and offers direct paths to the Lab and career journey. Work presents a calm, readable timeline. The Lab offers category filters, explicit status labels, a random-project action, and individual detail pages. About includes a small Beyond the Screen section for travel, running, diving, and curiosity outside work.
+## Product Purpose
 
-Navigation and a keyboard command palette should make the site easy to explore. Playfulness should be concentrated in projects and small interactions while the overall experience stays polished and legible.
+A personal home on the internet for Sathwik Chiluveru: real projects, career information, and a little personality. It should feel like him, remain useful as his career changes, and make it easy to explore what he has built.
 
-## Content rules
+## Positioning
 
-- Describe supplied experience without inventing achievements, metrics, clients, or certifications.
-- Separate proposed builds from actual work and unfinished projects from shipped products.
-- Use synthetic examples for financial workflows.
-- Publish only public, non-proprietary descriptions of professional responsibilities.
-- Add real demo, source, and social links when available; do not invent destinations.
+Sathwik works in fintech as an Associate Technical Account Manager at Broadridge in Singapore and has a software engineering background. Independent builds are a creative outlet, not a claim that his current role is primarily software development. Let the actual work and projects communicate that combination without packaging it as a slogan.
 
-## Maintenance
+## Operating Context
 
-Use local typed content and a small reusable component set. A new experiment should require adding a content entry, optional artwork, and its project description. No database, authentication, analytics integration, or admin dashboard is necessary for this version.
+Visitors browse Home, Work, Lab, and About. They can follow project source links, open available demos, filter the Lab, choose a random project, or use the command palette. The site is hosted on Vercel at https://sathwikchiluveru.vercel.app and deploys from the GitHub repository SathwikChiluveru/portfolio-website.
 
-## Completion criteria
+## Capabilities and Constraints
 
-All navigation targets resolve. Project filters and random selection work. Detail pages display accurate statuses. The interface works on phones and desktops, is usable by keyboard, and respects reduced motion. Production build and TypeScript checks pass before handoff.
+- Existing Next.js App Router application with TypeScript, Tailwind CSS, local typed project content, and Lucide icons.
+- Current public project selection: Sunshine Trace, TripBuddy, and FlyMePlease. Sunshine Trace and TripBuddy are featured on the homepage.
+- RoboAdvisor and SavvySprout were explicitly removed. Do not reintroduce them without a request.
+- Display actual builds backed by repository evidence, with accurate prototype/past-work labels. Do not fill the Lab with proposed projects or invented demos.
+- Notes was removed and should not return unless requested.
+- Career timeline includes Broadridge, NCS, Hummingbird Bioscience, and the existing Craftwills / Trinax entry. Do not invent dates, achievements, metrics, clients, or specific contributions.
+- Keep project content local and easy to update. No database, authentication, or admin dashboard is required.
+- Hosting and the chosen Vercel subdomain must remain free; no paid domain purchase is authorized.
+
+## Brand Commitments
+
+The user likes the current design, landing page, navbar, footer, icons, and colors. Preserve that established identity during copy changes.
+
+The homepage should feel chill and personal, with professional information as context. Work and About should describe experience and interests in straightforward, relaxed language. The user explicitly rejected headings such as "Understanding systems. Connecting the dots." and "The thread through it all" as trying too hard. Use simple headings and compact spacing; do not ask for a personal story when the request is to simplify the existing content.
+
+Use plain, specific, natural language. Do not substitute forced slang for authenticity. Avoid numbered section labels, the phrase "Beyond the Screen", and slogans such as "Two sides. Same curiosity." Company logos should retain their original artwork and colors.
+
+## Evidence on Hand
+
+- `lib/projects.ts`: current project selection, repository URLs, demos, stacks, and implementation descriptions.
+- `docs/project-sources.md`: source-file evidence and verification limits. This historical record also covers two projects no longer displayed.
+- `app/work/page.tsx`: supplied career details and timeline.
+- `public/logos/` and `docs/company-logo-sources.md`: sourced company branding.
+- `app/page.tsx`, `app/about/page.tsx`, and conversation feedback: established structure and approved preferences. Existing prose is not evidence of personal motivations or feelings.
+- Project illustrations are not screenshots. Available demo URLs were checked for HTTP availability, not full end-to-end functionality.
+- No personal anecdotes, detailed account of daily work, or first-person career story have yet been supplied. Obtain these rather than inventing a narrative.
+
+## Product Principles
+
+1. Sound like Sathwik, using his own perspective and concrete details.
+2. Lead with the person and actual builds; let career details support the picture.
+3. Prefer accurate, modest descriptions over inflated claims or polished slogans.
+4. Preserve the design the user likes while changing only the requested content or behavior.
+5. Keep the site easy to maintain and explore, including on phones and with a keyboard.
+
+## Open Decisions
+
+- No additional personal narrative is needed for the current Work and About copy; preserve the existing facts and keep the wording simple.
+- No default between image-mockup-first and direct-code workflows was chosen. Do not record either as a standing preference.
