@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Command, Search, X } from 'lucide-react';
-const pages = [{name:'Home',href:'/'},{name:'Work',href:'/work'},{name:'Lab',href:'/lab'},{name:'Notes',href:'/notes'},{name:'About',href:'/about'}];
+const pages = [{name:'Home',href:'/'},{name:'Work',href:'/work'},{name:'Lab',href:'/lab'},{name:'About',href:'/about'}];
 export function SiteNav(){
  const pathname=usePathname(); const [query,setQuery]=useState(''); const dialog=useRef<HTMLDialogElement>(null);
  useEffect(()=>{const handle=(e:KeyboardEvent)=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();dialog.current?.open?dialog.current.close():dialog.current?.showModal();}};window.addEventListener('keydown',handle);return()=>window.removeEventListener('keydown',handle)},[]);

@@ -25,7 +25,6 @@ npm start
 - `/`: introduction, professional focus, selected experiments, and a little life beyond the screen.
 - `/work`: career journey and professional capabilities.
 - `/lab`: filterable experiments, with project detail pages at `/lab/[slug]`.
-- `/notes`: a place for public learning and future writing.
 - `/about`: background and interests.
 
 ## Make it yours

@@ -10,7 +10,7 @@ The Lab is a collection of things built, explored, paused, or imagined. Projects
 
 ## First version
 
-The homepage communicates the two sides immediately and offers direct paths to the Lab and career journey. Work presents a calm, readable timeline. The Lab offers category filters, explicit status labels, a random-project action, and individual detail pages. Notes provides room for future writing without fabricating published articles. About includes a small Beyond the Screen section for travel, running, diving, and curiosity outside work.
+The homepage communicates the two sides immediately and offers direct paths to the Lab and career journey. Work presents a calm, readable timeline. The Lab offers category filters, explicit status labels, a random-project action, and individual detail pages. About includes a small Beyond the Screen section for travel, running, diving, and curiosity outside work.
 
 Navigation and a keyboard command palette should make the site easy to explore. Playfulness should be concentrated in projects and small interactions while the overall experience stays polished and legible.
 
